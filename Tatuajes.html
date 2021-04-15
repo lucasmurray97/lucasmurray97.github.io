@@ -1,0 +1,158 @@
+<!DOCTYPE html>
+<html>
+
+
+
+<head>
+
+
+
+  <title>PAMPI TATUAJES</title>
+  
+  <link rel = "stylesheet" type = "text/css" href = "assignment5.css">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css">
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.16.0/umd/popper.min.js"></script>
+  <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
+  <script type="text/javascript">
+  function checkName()
+  {
+	var field = document.getElementById("field1").value;
+	if (field.length < 5)
+	{
+		document.getElementById("message1").innerHTML = "Your Name is too short! Ask a friend to lend you his :)";
+	}
+	else
+		document.getElementById("message1").innerHTML = "Cool Name!";
+  }
+  function checkName2()
+  {
+	var field = document.getElementById("field2").value;
+	if (field.length < 5)
+	{
+		document.getElementById("message2").innerHTML = "Your Lastname is too short! Ask a friend to lend you his :)";
+	}
+	else
+		document.getElementById("message2").innerHTML = "Cool Lastname!";
+  }
+  function checkaddress()
+  {
+	var field = document.getElementById("domicilio").value;
+	if (field == "domicilio")
+	{
+		document.getElementById("mdireccion").innerHTML = 'Ingresa tu direccion!<input id="calle" type = "text";"/>';
+	}
+  }
+  function cotizar()
+  {
+	var cantidad = document.getElementById("cantidad").value;
+	var modelo = document.getElementById("modelo").value;
+	if (modelo == "barracuda")
+	{
+		document.getElementById("cotizacion").innerHTML = "Precio: "+(cantidad*5000).toString();
+	}
+	else
+		document.getElementById("cotizacion").innerHTML = "Precio: "+(cantidad*10000).toString();
+  }
+  </script>
+
+</head>
+
+
+<body>
+<div class="jumbotron text-center">
+<H1> PAMPI TATUAJES</H1>
+<H1 class = "ex1"> PAMPI TATUAJES</H1>
+
+</div>
+<H2>Artista Visual:</H2>
+<H2 class = "ex1">Artista Visual:</H2>
+<nav class="navbar navbar-expand-sm bg-light">
+<ul class="navbar-nav">
+  <li class="nav-item">
+    <a class="nav-link" href="final_assignment.html">Inicio</a>
+  </li>
+  <li class="nav-item">
+    <a class="nav-link" href="Ropa.html">Ropa</a>
+  </li>
+  <li class="nav-item">
+    <a class="nav-link" href="Tatuajes.html">Tatuajes</a>
+  </li>
+</ul>
+</nav>
+<div id="overflowTest">
+<p>A tattoo is a form of body modification where a design is made by inserting ink, dyes and pigments, either indelible or temporary, into the dermis layer of the skin to change the pigment. The art of making tattoos is tattooing.
+
+Tattoos fall into three broad categories: purely decorative (with no specific meaning); symbolic (with a specific meaning pertinent to the wearer); and pictorial (a depiction of a specific person or item). In addition, tattoos can be used for identification such as ear tattoos on livestock as a form of branding.[1]
+The word tattoo, or tattow in the 18th century, is a loanword from the Samoan word tatau, meaning "to strike".[2][3] The Oxford English Dictionary gives the etymology of tattoo as "In 18th c. tattaow, tattow. From Polynesian (Samoan, Tahitian, Tongan, etc.) tatau. In Marquesan, tatu." Before the importation of the Polynesian word, the practice of tattooing had been described in the West as painting, scarring or staining.[4]
+
+The etymology of the body modification term is not to be confused with the origins of the word for the military drumbeat or performance — see military tattoo. In this case, the English word tattoo is derived from the Dutch word taptoe.[5]
+
+Copyrighted tattoo designs that are mass-produced and sent to tattoo artists are known as "flash", a notable instance of industrial design.[6] Flash sheets are prominently displayed in many tattoo parlors for the purpose of providing both inspiration and ready-made tattoo images to customers.
+
+The Japanese word irezumi means "insertion of ink" and can mean tattoos using tebori, the traditional Japanese hand method, a Western-style machine or any method of tattooing using insertion of ink. The most common word used for traditional Japanese tattoo designs is horimono.[7] Japanese may use the word tattoo to mean non-Japanese styles of tattooing.
+
+British anthropologist Ling Roth in 1900 described four methods of skin marking and suggested they be differentiated under the names "tatu", "moko", "cicatrix" and "keloid".[8] The first is by pricking that leaves the skin smooth, as found in places including the Pacific Islands, the second a tattoo combined with chiselling to leave furrows in the skin, as found in places including New Zealand, the third is scarification using a knife or chisel, as found in places including West Africa, and the fourth is scarification by irritating and re-opening a preexisting wound, rescarification, to form a raised scar, as found in places including Tasmania, Australia, Melanesia, and Central Africa.[9] "Impicit in the classification was an evolutionary development from the most primitive form of body modification [the last] to the most sophisticated [the first]."[9]</p>
+</div>
+
+<div class = "row">
+
+<div class="col">
+<H3>Tatuajes:</H2>
+<table class = "table">
+
+<tr>
+<td>Modelo:</td><td>Foto:</td><td>Colores:</td><td>Precio:</td>
+</tr>
+
+<tr>
+<td>Medusa</td><td><img id="img1" src = "https://telanganatoday.com/wp-content/uploads/2019/11/TATTOO.jpg" class="mx-auto d-block"/></td><td>Azul,Negro,Rojo</td><td>$5.000</td>
+</tr>
+
+<tr>
+<td>Sleeve</td><td><img id="img" src = "https://images-na.ssl-images-amazon.com/images/I/61mRxiYp7jL._SY355_.jpg" class="mx-auto d-block"/></td><td>Azul,Negro,Rojo</td><td>$10.000</td>
+</tr>
+</table>
+</div>
+<div class="col">
+<H3>Para cotizar rellena este formulario!:</H2>
+<form>
+Nombre<br>
+<input id="field1" type = "text" onblur = "checkName();"/> <span id = "message1"></span><br>
+Apellido<br>
+<input id="field2" type = "text" onblur = "checkName2();"/> <span id = "message2"></span><br>
+<label for="modelo">Modelo:</label>
+<select id="modelo" name="modelo">
+  <option value="barracuda">Medusa</option>
+  <option value="quierotodo">Sleeve</option>
+</select><br>
+Colores<br>
+<input type="checkbox" id="tallas" name="tallas" value="S">
+  <label for="tallas">Azul</label><br>
+  <input type="checkbox" id="tallam" name="tallas" value="M">
+  <label for="tallam">Negro</label><br>
+  <input type="checkbox" id="tallal" name="tallas" value="L">
+  <label for="tallal">Rojo</label><br>
+Proporción<br>
+<input type = "number" id = "cantidad" name = "cantidad" required/><br>
+Fecha de Sesión
+<input type = "date" name = "fechaentrega" required/><br>
+Modalidad de Pago<br>
+<input type="radio" id="credito" name="pago" value="credito">
+<label for="credito">Credito</label><br>
+<input type="radio" id="debito" name="pago" value="debito>
+<label for="debito">Debito</label><br>
+<button type="button" class="btn btn-outline-success" colspan = "3" onclick = "cotizar();">Clickea para cotizar!</button><BR/>
+<span id = "cotizacion"></span><br>
+<input type= "submit";">
+</form><br>
+</div>
+</div>
+</div>
+</body>
+
+
+
+
+</html>
